@@ -1,0 +1,28 @@
+{
+  "name": "conservatoire",
+  "version": "1.0.0",
+  "description": "This is a practice project for Numerica.\r 18/11/2022",
+  "main": "index.js",
+  "source": "src/pug/pages/index.pug",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tnhnkzc/Conservatoire-Numerica.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tnhnkzc/Conservatoire-Numerica/issues"
+  },
+  "homepage": "https://github.com/tnhnkzc/Conservatoire-Numerica#readme",
+  "devDependencies": {
+    "@parcel/transformer-pug": "^2.8.0",
+    "parcel": "^2.8.0"
+  },
+  "dependencies": {
+    "pug": "^3.0.2"
+  }
+}
