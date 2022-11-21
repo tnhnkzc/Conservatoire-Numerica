@@ -4,18 +4,13 @@ html(lang="en")
     meta( charset="UTF-8")
     meta( http-equiv="X-UA-Compatible" content="IE=edge")
     meta( name="viewport" content="width=device-width, initial-scale=1.0")
-    link(rel="stylesheet", href="../../css/styles.css",  type='text/css')
-    title Conservatoire Henri Dutilleux
+    link(rel="stylesheet", href="../../../assets/css/styles.css",  type='text/css')
+    block title 
   head
   body
-    header
-      nav
-        ul 
-          li
-            a(href="/") Accueil 
-          li  
-            a(href="conservatoire.pug") Conservatoire
-          li  
-            a(href="agenda.pug") Agenda
+    include includes/header.pug
+    
     main 
       block main
+  
+    include includes/footer.pug

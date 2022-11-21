@@ -1,4 +1,22 @@
 extends ../base.pug 
 
-block main 
+block title 
   h1 Titre de la page d'accueil
+
+block main
+  div 
+    h1 Conservatoire Henri Dutilleux 
+    h2 Conservatoire à rayonnement départemental du Grand Belfort 
+  ul 
+    li
+      a(href="#")
+        include ../../../assets/img/svg/icon_musique.svg
+        | Musique 
+    li
+      a(href="#") 
+        include ../../../assets/img/svg/icon_theatre.svg
+        | Théâtre 
+    li
+      a(href="#")
+        include ../../../assets/img/svg/icon_danse.svg
+        | Danse 
