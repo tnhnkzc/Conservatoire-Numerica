@@ -1,0 +1,19 @@
+mixin card(title,date,text,imgName,imgAlt, link)
+  article.card
+    img(src=`../../../assets/img/photos/${imgName}`, alt=`${imgAlt}`, class="w-60")
+    h3 
+      a(href=`${link}`)= title
+    div 
+      p= date
+      p= text
+      a(href=`${link}`) Plus d'info
+
+mixin duotone(imgName, imgAlt)
+  picture.duotone
+    img(src=`../../../assets/img/photos/${imgName}`, alt=`${imgAlt}`, class="w-60")
+
+
+mixin btn(btnHref, btnText)
+  a.btn(href=`${btnHref}`)
+    include ../../assets/img/svg/icon_ArrowLine.svg
+    = btnText
