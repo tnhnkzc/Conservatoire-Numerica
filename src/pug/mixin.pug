@@ -17,3 +17,9 @@ mixin btn(btnHref, btnText)
   a.btn(href=`${btnHref}`)
     include ../../assets/img/svg/icon_ArrowLine.svg
     = btnText
+
+mixin hero(title, chapo, imgName, imgAlt) 
+  header
+    h1= title 
+  p= chapo
+  +duotone(imgName,imgAlt)
