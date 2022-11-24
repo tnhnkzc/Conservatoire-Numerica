@@ -1,16 +1,62 @@
 extends ../base.pug
-block title 
-  h1(class='titre')
+
+block title
+  title Conservatoire — Agenda
 
 block main 
   +hero(
     "Agenda",
     "Lieu de création artistique, le conservatoire propose régulièrement des actions culturelles ouvertes à tous.",
-    "agenda-musique-09.jpg",
+    "agenda-musique-09",
     "Orchestre"
   )
 
-  div 
-    +card("Concert d'ouverture","Lundi 15 mars à 20h30","Dans le cadre de l'Enlèvement au sérail, Payot Genève organise une rencontre avec l'écrivain et journaliste turque dissdente Asli Erdogan","agenda-musique.jpg","musique","#")
-    +card("Concerto violons","Vendredi 7 juin à 20h30","L’avarice d’Harpagon retentit sur toute sa maison : ses serviteurs n’ont que des vêtements sales ou abîmés, ses chevaux meurent de faim, et son fils même emprunte à un usurier qui se révèle être… son propre père !","agenda-theatre.jpg","theatre","#")
-    +card("Spectacle de danse","Mardi 21 avril à 20h30","Mourad Merzouki relève le défi d’un corps à corps avec le vent et propulse sa danse sur la mer du Vendée Globe.","agenda-danse.jpg","danse","#")
+  div   
+    +card(
+      "agenda-musique",
+      "description image",
+      "Concert d'ouverture",
+      "15 mars à 20h30",
+      'Dans le cadre de l’Enlèvement au sérail, Payot Genève organise une rencontre avec l’écrivain et journaliste turque dissidente Asl Erdogan.',
+      '#'
+    )
+    +card(
+      "agenda-theatre",
+      "description image",
+      "Le malade imaginaire",
+      "21 mars à 20h30",
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus cursus euismod. Nam ultricies dui at velit eleifend, in tristique lectus rhoncus.',
+      '#'
+    )
+    +card(
+      "agenda-danse",
+      "description image",
+      "Concerto pour violons",
+      "15 avril à 20h30",
+      'Lorem ipsum dolor sit amet. Duis luctus cursus euismod. Nam ultricies dui at velit eleifend, in tristique lectus rhoncus.',
+      '#'
+    )
+    +card(
+      "agenda-musique",
+      "description image",
+      "Concert d'ouverture",
+      "15 mars à 20h30",
+      'Dans le cadre de l’Enlèvement au sérail, Payot Genève organise une rencontre avec l’écrivain et journaliste turque dissidente Asl Erdogan.',
+      '#'
+    )
+    +card(
+      "agenda-theatre",
+      "description image",
+      "Le malade imaginaire",
+      "21 mars à 20h30",
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus cursus euismod. Nam ultricies dui at velit eleifend, in tristique lectus rhoncus.',
+      '#'
+    )
+    +card(
+      "agenda-danse",
+      "description image",
+      "Concerto pour violons",
+      "15 avril à 20h30",
+      'Lorem ipsum dolor sit amet. Duis luctus cursus euismod. Nam ultricies dui at velit eleifend, in tristique lectus rhoncus.',
+      '#'
+    )
