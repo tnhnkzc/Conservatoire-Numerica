@@ -1,0 +1,32 @@
+// Couleurs
+
+$colors: (
+  primary: #1d096b,
+  secondary: #feaa9b,
+  darkColor: #1c1514,
+  gray-300: #828282,
+  gray-200: #cdc8c6,
+  gray-100: #e9e7e4,
+  lightColor: #fafafa,
+  selection: #caae7b,
+);
+
+// Typographie
+
+$typo: (
+  mono: (
+    "Space Mono",
+    courier,
+  ),
+  sans-serif: (
+    "Mulish",
+    sans-serif,
+  ),
+);
+// Espaces
+
+$spaces: (
+  s: 24px,
+  m: 48px,
+  l: 96px,
+);

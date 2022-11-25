@@ -20,6 +20,7 @@
   "homepage": "https://github.com/tnhnkzc/Conservatoire-Numerica#readme",
   "devDependencies": {
     "@parcel/transformer-pug": "^2.8.0",
+    "@parcel/transformer-sass": "^2.8.0",
     "parcel": "^2.8.0",
     "sharp": "^0.31.2"
   },
