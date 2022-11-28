@@ -20,11 +20,18 @@ Soyez attentifs à l'ordre d'import :
 // Utilitaires
 @import "utils/variables";
 @import "utils/functions";
+@import "utils/utilsClass";
 
 // Règles de base
 @import "base/main";
 @import "base/media";
 
 // Layout
+@import "layout/header";
+@import "layout/footer";
+@import "layout/grid";
 
 // Composants
+@import "components/menu";
+@import "components/hero";
+@import "components/chapo";

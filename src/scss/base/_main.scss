@@ -30,3 +30,11 @@ h3 {
   font-size: rem(18);
   line-height: 1.4;
 }
+
+button {
+  background: none;
+  border: none;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+}

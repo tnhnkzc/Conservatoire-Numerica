@@ -153,6 +153,12 @@ template, [hidden] {
   display: none;
 }
 
+.listUnstyled {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 *, :before, :after {
   box-sizing: border-box;
 }
@@ -183,6 +189,14 @@ h3 {
   line-height: 1.4;
 }
 
+button {
+  appearance: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+}
+
 img, svg {
   max-width: 100%;
   height: auto;
@@ -197,6 +211,7 @@ img, svg {
 .duotone img {
   filter: grayscale();
   mix-blend-mode: multiply;
+  object-fit: cover;
   flex: 1 0 100%;
 }
 
@@ -207,6 +222,121 @@ img, svg {
   background-color: #1d096b;
   position: absolute;
   inset: 0;
+}
+
+.header {
+  width: 100%;
+  z-index: 2;
+  background-color: #fafafa;
+  justify-content: space-between;
+  padding: 12px 24px;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.header__start, .header__end {
+  align-items: center;
+  display: flex;
+}
+
+.header__end {
+  flex-direction: row-reverse;
+}
+
+.header__search {
+  width: 80px;
+}
+
+.header__logo {
+  z-index: 20;
+  position: relative;
+}
+
+.header__logo .style-svg {
+  width: 50px;
+  height: 50px;
+  display: block;
+}
+
+.grid.-fullHeight {
+  height: 100vh;
+  grid-template-rows: 4fr 1fr;
+  gap: 48px;
+  padding-left: 24px;
+  padding-right: 24px;
+  display: grid;
+}
+
+.menu {
+  display: none;
+}
+
+.menuBurger {
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+
+.menuBurger__bar, .menuBurger__bar:before, .menuBurger__bar:after {
+  content: "";
+  height: 2px;
+  width: 100%;
+  z-index: 3;
+  background-color: #1c1514;
+  position: absolute;
+  left: 0;
+}
+
+.menuBurger__bar:before {
+  top: -10px;
+}
+
+.menuBurger__bar:after {
+  top: 10px;
+}
+
+.hero {
+  position: relative;
+}
+
+.hero__header {
+  color: #fafafa;
+  align-self: flex-end;
+}
+
+.hero__subtitle {
+  text-transform: uppercase;
+  letter-spacing: .0625rem;
+  font-size: .8125rem;
+}
+
+.hero__img {
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+}
+
+.chapo {
+  background-color: #fafafa;
+  align-items: center;
+  margin-left: -24px;
+  margin-right: -24px;
+  display: grid;
+}
+
+.chapo.-col {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.chapo__link {
+  color: #1c1514;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  display: flex;
 }
 
 /*# sourceMappingURL=index.e8265c92.css.map */
