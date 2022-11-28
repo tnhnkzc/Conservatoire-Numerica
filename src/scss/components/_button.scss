@@ -1,0 +1,9 @@
+.btn {
+  border: 1px solid map-get($colors, secondary);
+  background-color: map-get($colors, lightColor);
+  padding: map-get($spaces, xs);
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
