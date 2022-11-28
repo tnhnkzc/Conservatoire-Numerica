@@ -2,8 +2,8 @@
   background-color: map-get($colors, lightColor);
   display: grid;
   align-items: center;
-  margin-right: -#{map-get($spaces, m)};
-  margin-left: -#{map-get($spaces, m)};
+  margin-right: -#{map-get($spaces, s)};
+  margin-left: -#{map-get($spaces, s)};
   &.-col {
     grid-template-columns: repeat(3, 1fr);
     gap: map-get($spaces, s);
