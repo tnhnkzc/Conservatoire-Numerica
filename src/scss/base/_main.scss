@@ -6,9 +6,10 @@
 
 body {
   font-family: map-get($typo, "sans-serif");
-  font-size: rem(13);
+  //font-size: rem(13);
+  @include fluid-type($body);
   line-height: 1.6;
-  background-color: map-get($colors, lightColor);
+  background-color: map-get($colors, lightcolor);
 }
 
 h1,
@@ -19,15 +20,18 @@ h2 {
 }
 
 h1 {
-  font-size: rem(36);
+  //font-size: rem(36);
+  @include fluid-type($body);
 }
 
 h2 {
-  font-size: rem(28);
+  //font-size: rem(28);
+  @include fluid-type($body);
 }
 
 h3 {
-  font-size: rem(18);
+  //font-size: rem(18);
+  @include fluid-type($body);
   line-height: 1.4;
 }
 

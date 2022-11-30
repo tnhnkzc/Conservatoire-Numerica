@@ -8,7 +8,8 @@
 
   &__subtitle {
     text-transform: uppercase;
-    font-size: rem(13);
+    //font-size: rem(13);
+    @include fluid-type($small);
     letter-spacing: rem(1);
   }
 
