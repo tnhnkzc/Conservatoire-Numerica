@@ -26,5 +26,6 @@ svg {
     background-color: map-get($colors, primary);
     z-index: 1;
     mix-blend-mode: lighten;
+    transition: all 0.3s ease-in-out;
   }
 }
