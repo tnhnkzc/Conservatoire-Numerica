@@ -31,6 +31,7 @@ Soyez attentifs à l'ordre d'import :
 @import "layout/header";
 @import "layout/footer";
 @import "layout/grid";
+@import "layout/section";
 
 // Composants
 @import "components/menu";
@@ -38,3 +39,5 @@ Soyez attentifs à l'ordre d'import :
 @import "components/chapo";
 @import "components/button";
 @import "components/card";
+@import "components/crd";
+@import "components/stats";

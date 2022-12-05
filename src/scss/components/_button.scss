@@ -1,30 +1,85 @@
 .btn {
   border: 1px solid map-get($colors, secondary);
-  background-color: map-get($colors, lightColor);
-  padding: map-get($spaces, xs);
+  padding: 16px map-get($spaces, "s");
   display: inline-flex;
-  flex-direction: row;
   align-items: center;
-  gap: 11px;
   justify-content: center;
-  color: map-get($colors, darkcolor);
+  gap: 11px;
+
+  color: map-get($colors, darkColor);
   text-transform: uppercase;
-  //font-size: rem(12);
-  @include fluid-type($small);
   text-decoration: none;
+  @include fluid-type($small);
+  font-weight: bold;
   letter-spacing: rem(1);
+
+  transition: all 0.3s ease-in-out;
 
   &:hover {
     box-shadow: inset 0 0 0 8px map-get($colors, secondary);
   }
+
   &.-outlined {
     border-color: map-get($colors, lightColor);
     color: map-get($colors, lightColor);
+
     svg path {
       fill: map-get($colors, lightColor);
     }
+
     &:hover {
       box-shadow: inset 0 0 0 8px map-get($colors, lightColor);
+    }
+  }
+
+  &.-dark {
+    border-color: map-get($colors, darkColor);
+    background-color: map-get($colors, darkColor);
+    color: map-get($colors, lightColor);
+
+    &:hover {
+      box-shadow: none;
+    }
+  }
+}
+
+.moreLink {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: map-get($colors, darkColor);
+  position: relative;
+  display: inline-block;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: map-get($colors, darkColor);
+  }
+
+  &::before {
+    transform: scaleX(1);
+    transform-origin: right;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &::after {
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.3s ease-in-out 0.1s;
+  }
+
+  &:hover {
+    &::before {
+      transform: scaleX(0);
+    }
+
+    &::after {
+      transform: scaleX(1);
     }
   }
 }
