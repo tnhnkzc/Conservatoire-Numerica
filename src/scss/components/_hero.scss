@@ -1,14 +1,17 @@
 .hero {
   position: relative;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 4fr 1fr;
+  gap: map-get($spaces, m);
 
   &__header {
     color: map-get($colors, lightColor);
-    align-self: flex-end;
+    align-self: end;
   }
 
   &__subtitle {
     text-transform: uppercase;
-    //font-size: rem(13);
     @include fluid-type($small);
     letter-spacing: rem(1);
   }
@@ -17,5 +20,17 @@
     position: absolute;
     inset: 0;
     z-index: -1;
+  }
+  &__chapo {
+    background-color: map-get($colors, lightColor);
+    display: grid;
+    align-items: center;
+    margin-left: -#{map-get($spaces, s)};
+    margin-right: -#{map-get($spaces, s)};
+    padding: map-get($spaces, s);
+  }
+  &__text {
+    @include fluid-type($excerpt);
+    line-height: 1.5;
   }
 }

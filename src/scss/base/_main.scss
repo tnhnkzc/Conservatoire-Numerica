@@ -21,17 +21,17 @@ h2 {
 
 h1 {
   //font-size: rem(36);
-  @include fluid-type($body);
+  @include fluid-type($heading-1);
 }
 
 h2 {
   //font-size: rem(28);
-  @include fluid-type($body);
+  @include fluid-type($heading-2);
 }
 
 h3 {
   //font-size: rem(18);
-  @include fluid-type($body);
+  @include fluid-type($heading-3);
   line-height: 1.4;
 }
 

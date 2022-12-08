@@ -9,8 +9,8 @@ const page = document.documentElement;
 
 // La fonction permettant de basculer l'affichage en ajoutant/supprimant des classes
 function doToggle() {
-  this.classList.toggle("-open");
-  menu.classList.toggle("-open");
+  this.classList.toggle("menuBurger--open");
+  menu.classList.toggle("menu--open");
   page.classList.toggle("noscroll");
 }
 

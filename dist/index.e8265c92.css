@@ -159,6 +159,15 @@ template, [hidden] {
   list-style: none;
 }
 
+.noscroll, .noscroll body {
+  overflow: hidden;
+}
+
+.main-column {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
 *, :before, :after {
   box-sizing: border-box;
 }
@@ -173,11 +182,18 @@ h1, h2 {
   font-family: Space Mono, courier;
   font-weight: normal;
   line-height: 1.1;
-  font-size: clamp(.8125rem, .8125rem + 2 * ((100vw - 640px) / 656), .9375rem);
+}
+
+h1 {
+  font-size: clamp(2.25rem, 2.25rem + 28 * ((100vw - 640px) / 656), 4rem);
+}
+
+h2 {
+  font-size: clamp(1.75rem, 1.75rem + 4 * ((100vw - 640px) / 656), 2rem);
 }
 
 h3 {
-  font-size: clamp(.8125rem, .8125rem + 2 * ((100vw - 640px) / 656), .9375rem);
+  font-size: clamp(1.125rem, 1.125rem + 14 * ((100vw - 640px) / 656), 2rem);
   line-height: 1.4;
 }
 
@@ -297,13 +313,6 @@ img, svg {
   padding-right: 24px;
 }
 
-.grid.-fullHeight {
-  height: 100vh;
-  grid-template-rows: 4fr 1fr;
-  gap: 48px;
-  display: grid;
-}
-
 .section {
   position: relative;
 }
@@ -344,7 +353,36 @@ img, svg {
 }
 
 .menu {
-  display: none;
+  visibility: hidden;
+  width: 100vw;
+  height: 100vh;
+  font-size: clamp(1.375rem, 1.375rem + -9 * ((100vw - 640px) / 656), .8125rem);
+  background-color: #1d096b;
+  transition: all;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.menu__list {
+  margin-top: 25vh;
+  margin-left: 10vw;
+}
+
+.menu__item {
+  margin-top: .5rem;
+}
+
+.menu__link {
+  color: #fafafa;
+  padding: 5px 20px;
+  text-decoration: none;
+}
+
+.menu--open {
+  visibility: visible;
+  opacity: 1;
 }
 
 .menuBurger {
@@ -359,6 +397,7 @@ img, svg {
   width: 100%;
   z-index: 3;
   background-color: #1c1514;
+  transition: all .3s ease-in-out;
   position: absolute;
   left: 0;
 }
@@ -371,13 +410,28 @@ img, svg {
   top: 10px;
 }
 
+.menuBurger--open .menuBurger__bar {
+  background-color: #fafafa;
+  transform: rotate(135deg);
+}
+
+.menuBurger--open .menuBurger__bar:before, .menuBurger--open .menuBurger__bar:after {
+  background-color: #fafafa;
+  top: 0;
+  transform: rotate(90deg);
+}
+
 .hero {
+  height: 100vh;
+  grid-template-rows: 4fr 1fr;
+  gap: 48px;
+  display: grid;
   position: relative;
 }
 
 .hero__header {
   color: #fafafa;
-  align-self: flex-end;
+  align-self: end;
 }
 
 .hero__subtitle {
@@ -392,12 +446,18 @@ img, svg {
   inset: 0;
 }
 
-.chapo {
+.hero__chapo {
   background-color: #fafafa;
   align-items: center;
   margin-left: -24px;
   margin-right: -24px;
+  padding: 24px;
   display: grid;
+}
+
+.hero__text {
+  font-size: clamp(1.375rem, 1.375rem + -9 * ((100vw - 640px) / 656), .8125rem);
+  line-height: 1.5;
 }
 
 .chapo.-col {
